@@ -36,3 +36,10 @@ Microinstructioncycles: 2
 	JMP
 0C HLT turns the clock off
 	HLT
+
+0D LDO loads value of RAM into the output register
+	Mot, RAi
+	Rot, Oin
+0E OTO loads value of output register into RAM
+	mot, RAi
+	Oot, Rin
