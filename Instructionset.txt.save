@@ -1,0 +1,45 @@
+Instruction Address
+00-ff	     00-ff
+
+Microinstructioncycles: 2
+
+01 LDA  loads value of RAM into reg A
+	Mot, RAi
+	Rot, Ain
+02 LDB  loads value of RAM into reg B
+	Mot, RAi
+	Rot, Bin
+03 LDC  loads value of RAM into reg C
+	Mot, RAi
+	Rot, Cin
+04 OTC  loads value of reg C into RAM
+	Mot, RAi
+	Cot, Rin
+05 SEC (Value) sets reg C to a specified value
+	Mot, Cin
+
+06 ALO  outputs value of ALU operation into RAM
+	Mot, RAi
+	Alo, Rin
+07 LDF  loads value of RAM into ALU flags reg
+	Mot, RAi
+	Rot, Fin
+
+08 LDJ  loads value of RAM into the JMP reg
+	Mot, RAi
+	Rot, COi
+09 JIZ Jumps if operation in ALU is equal to Zero
+	JMZ
+0A JIC Jumps if operation in ALU is equal to more than 256
+	JMC
+0B JMP Jumps unconditionally
+	JMP
+0C HLT turns the clock off
+	HLT
+
+0D LDO loads value of RAM into the output register
+	Mot, RAi
+	Rot, Oin
+0E OTO loads value of output register into RAM
+	mot, RAi
+	Oot, Rin
