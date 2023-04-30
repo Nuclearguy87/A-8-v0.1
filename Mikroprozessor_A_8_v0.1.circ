@@ -141,7 +141,7 @@ end TCL_Generic;&#13;
   <circuit name="main">
     <a name="circuit" val="main"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <a name="simulationFrequency" val="4.0"/>
+    <a name="simulationFrequency" val="16.0"/>
     <comp lib="0" loc="(100,330)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
@@ -505,14 +505,16 @@ end TCL_Generic;&#13;
     <comp lib="4" loc="(600,180)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 16
-401 300 600 413 302 407 303 0
-101 501 c01 0 101 500 c00 702
-900 703 a00 b00
+401 300 600 414 302 407 303 0
+101 501 702 900 c01 0 101 500
+900 c00 703 a00 400 300 301 302
+303 700 a00
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
     <comp lib="4" loc="(650,710)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(820,690)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
